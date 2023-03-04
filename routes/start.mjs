@@ -1,5 +1,5 @@
 import express from "express"; //importing express for its router
-import getSession from "./session.mjs";
+import { getSession } from "./session.mjs";
 const router = express.Router(); //start page's router
 
 router.post("/", (req, res) => {
@@ -17,11 +17,11 @@ router.post("/", (req, res) => {
   console.log("+++++++++++++++++++++++++++");
   console.log(session.game.start(0, 1));
   // session.game
-    // .start(req.body.minYear, req.body.maxYear)
-    // .then(({ type, data }) => {
-    //   res.contentType(type);
-    //   res.send(data);
-    // });
+  // .start(req.body.minYear, req.body.maxYear)
+  // .then(({ type, data }) => {
+  //   res.contentType(type);
+  //   res.send(data);
+  // });
 });
 
 export default router;
